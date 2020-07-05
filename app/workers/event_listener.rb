@@ -9,7 +9,6 @@ class EventListener
     ActiveRecord::Base.connection_pool.with_connection do
       klass.constantize.perform event
     end if handler_defined? klass
-  ensure
     ack!
   end
 
