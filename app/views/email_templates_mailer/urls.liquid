@@ -1,9 +1,10 @@
 ---
-subject: 'Urls fetched'
+subject: '{{subject}}'
 from: 'admin@example.com'
 ---
 
 Results:
-{% for url in urls %}
-  {{url}}
+{% for link in urls %}
+  {{link.text}}
+  {{link.url}}
 {% endfor %}

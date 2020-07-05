@@ -11,8 +11,8 @@ class EmailTemplatesMailer < Effective::EmailTemplatesMailer
     mail(to: user[:email])
   end
 
-  def urls(email, urls)
-    @assigns = { urls: urls }
+  def urls(email, subject, urls)
+    @assigns = { subject: subject, urls: urls }
     
     mail to: email
   end
