@@ -1,9 +1,6 @@
 class WelcomeHandler < ApplicationHandler
   def perform
-    user = OpenStruct.new(
-      firstname: 'Guinea',
-      lastname: 'Piggy'
-    )
+    user = event[:data]
     EmailTemplatesMailer.welcome(user).deliver
   end
 end

@@ -1,6 +1,6 @@
 class EventListener
   include Sneakers::Worker
-  from_queue ENV['QUEUE']
+  from_queue ENV['TASKS_QUEUE']
 
   def work(raw_event)
     event = JSON.parse raw_event, symbolize_names: true

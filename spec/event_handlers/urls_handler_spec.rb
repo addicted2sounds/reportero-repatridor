@@ -1,14 +1,15 @@
 require 'rails_helper'
 
-describe WelcomeHandler, type: :event_handler do
+describe UrlsHandler do
   let(:perform) { EventListener.new.work event }
   let(:event) do
     {
-      'type' => 'welcome',
+      'type' => 'urls',
       'data' => {
-        'firstname' => 'Yuliy',
-        'lastname' => 'Cesar',
-        'email' => 'user@example.com'
+        'email' => 'user@example.com',
+        'urls' => [
+          'https://google.com'
+        ]
       }
     }.to_json
   end
