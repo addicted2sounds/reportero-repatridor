@@ -22,6 +22,12 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'haml-rails' # or try using gem 'hamlit-rails'
+gem 'effective_email_templates'
+gem 'effective_datatables'
+gem 'bootstrap', '~> 4.5.0'
+gem 'jquery-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
